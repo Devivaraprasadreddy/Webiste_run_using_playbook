@@ -1,0 +1,16 @@
+---
+- hosts: 54.91.171.79
+  tasks:
+    - name: run the server
+      service:
+        name: apache2
+        state: started
+        enabled: yes
+
+
+    - name: to run the website
+      copy:
+        src: /root/fashion/healet-html
+        dest: /var/www/html
+
+
